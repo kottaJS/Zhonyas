@@ -1,0 +1,16 @@
+# Visual Studio / .NET / C#
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+.vscode/
+
+# Build / Temp
+*.tmp
+*.log
+Zhonyas_new.exe
