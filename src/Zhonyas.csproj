@@ -36,18 +36,38 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="PresentationCore" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Localization\ILanguage.cs" />
+    <Compile Include="Localization\I18n.cs" />
+    <Compile Include="Localization\EnglishLanguage.cs" />
+    <Compile Include="Localization\SpanishLanguage.cs" />
+    <Compile Include="Localization\PortugueseLanguage.cs" />
+    <Compile Include="Localization\ChineseLanguage.cs" />
+    <Compile Include="Localization\KoreanLanguage.cs" />
+    <Compile Include="Localization\JapaneseLanguage.cs" />
     <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HelpDialogs.cs" />
+    <Compile Include="UI\TrayManager.cs" />
+    <Compile Include="UI\LuluAnimator.cs" />
+    <Compile Include="Services\AssetLoader.cs" />
     <Compile Include="Services\FirewallService.cs" />
     <Compile Include="Services\LeagueFinder.cs" />
+    <Compile Include="Services\MatchTracker.cs" />
+    <Compile Include="Services\RetryClicker.cs" />
+    <Compile Include="Services\SettingsManager.cs" />
     <Compile Include="Services\SoundAlert.cs" />
   </ItemGroup>
   <ItemGroup>
