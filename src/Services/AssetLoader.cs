@@ -40,6 +40,16 @@ namespace LoLFirewallManager.Services
                 {
                     return new Icon(iconPath);
                 }
+
+                var asm = System.Reflection.Assembly.GetExecutingAssembly();
+                using (Stream stream = asm.GetManifestResourceStream("zhonyas.ico"))
+                {
+                    if (stream != null)
+                    {
+                        return new Icon(stream);
+                    }
+                }
+
                 return Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             }
             catch
@@ -66,9 +76,14 @@ namespace LoLFirewallManager.Services
                 {
                     if (stream != null)
                     {
-                        using (Image img = Image.FromStream(stream))
+                        using (MemoryStream ms = new MemoryStream())
                         {
-                            return ParseFrames(img);
+                            stream.CopyTo(ms);
+                            ms.Position = 0;
+                            using (Image img = Image.FromStream(ms))
+                            {
+                                return ParseFrames(img);
+                            }
                         }
                     }
                 }
@@ -91,4 +106,3 @@ namespace LoLFirewallManager.Services
         }
     }
 }
-

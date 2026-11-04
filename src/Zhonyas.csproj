@@ -72,7 +72,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.manifest" />
-    <Content Include="..\assets\icons\zhonyas.ico" />
+    <EmbeddedResource Include="..\assets\images\luluzhonya.gif">
+      <LogicalName>luluzhonya.gif</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\assets\audio\zhonyain.mp3">
+      <LogicalName>zhonyain.mp3</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\assets\audio\countdown.mp3">
+      <LogicalName>countdown.mp3</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\assets\audio\zhonyaout.mp3">
+      <LogicalName>zhonyaout.mp3</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\assets\icons\zhonyas.ico">
+      <LogicalName>zhonyas.ico</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
