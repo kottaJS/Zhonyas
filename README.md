@@ -22,7 +22,7 @@
 ---
 
 > [!NOTE]
-> **Vanguard Safety:** Zhonyas operates strictly at the Windows Firewall level (`netsh`). It does not inject code, read memory, or hook game APIs. It does not trigger anti-cheat bans.
+> **Vanguard Safety:** Zhonyas operates strictly at the Windows Firewall level (Windows COM API). It does not inject code, read memory, or hook game APIs. It does not trigger anti-cheat bans.
 
 ---
 
@@ -49,6 +49,7 @@ We’ve all been there. But League of Legends loading screens are dangerously fa
   - `3.5 min (Recommended)`
   - `4 min (Risky - Match may start)`
   - `5 min (Danger - Remake risk)`
+- **Multi-Language Support:** English, Español, Português, 中文, 한국어, and 日本語.
 - **Audio Alerts:** Sound cues on start, at 10 seconds remaining, and upon unfreeze.
 - **Standalone:** Single `.exe` with all assets embedded inside. No installation required.
 - **100% Open Source:** Licensed under GNU General Public License v3.0 (GPL-3.0).
